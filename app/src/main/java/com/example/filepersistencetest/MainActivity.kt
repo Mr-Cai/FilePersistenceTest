@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val inputText = load()
-        if (!TextUtils.isEmpty(inputText)) {
+        if (inputText.isNotEmpty()) {
             inputET!!.setText(inputText)
             inputET!!.setSelection(inputText.length)
             Toast.makeText(this, "恢复成功", Toast.LENGTH_SHORT).show()
